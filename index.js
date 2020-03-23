@@ -94,9 +94,8 @@ block: { // Breaking from a label not using a loop
   break block;
   console.log("after");
 }
-*/
-function* people() {
-  // Creating a list of peoples ages
+
+function* people() {  // Creating a list of peoples ages
   yield 43;
   yield 12;
   yield 25;
@@ -111,3 +110,27 @@ let string = "text"; // Print text as individual letters
 for (let value of string) {
   console.log(value);
 }
+
+let array = [0, 1, 2];
+
+for (let value of array) { // loop and array
+    console.log(value);
+}
+
+let object = { 
+        a: 1, 
+        b: 2, 
+        c: 3 
+    };
+for (let value of object) { //Object is not iterable
+   console.log( value );
+}
+
+let ages = {
+  a: 19,
+  b: 42,
+  c: 35
+};
+console.log(Object.keys(ages));
+//Keys method returns an array which has elements that return strings that corresponde with an enumerable value. These are iterated in the same order as a normal loop would.
+*/
