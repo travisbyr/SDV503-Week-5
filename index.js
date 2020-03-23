@@ -59,23 +59,55 @@ for (let i = 0;; i++) { // Breaking a loop
     console.log(" loop");
     break;
 }
-
+ 
 let c = 0;
-mark: for (let i = 0; i < 5; i++)
+mark: for (let i = 0; i < 5; i++) {
   inner: for (let j = 0; j < 5; j++) { // break to a label
     c++;
     if (i == 2) {
       break mark;
     }
   }
+}
 console.log(c);
-*/
+
 let c = 0;
-mark: for (let i = 0; i < 5; i++)
+mark: for (let i = 0; i < 5; i++) {
+  console.log(i);
   inner: for (let j = 0; j < 5; j++) {
+    console.log(j);
     c++;
+    console.log(c);
     if (i == 2) {
       break inner;
     }
   }
+}
 console.log(c);
+
+let x = 5;
+console.log(`x=${x}`);
+console.log(`x= ` + x);
+
+block: { // Breaking from a label not using a loop
+  console.log("before");
+  break block;
+  console.log("after");
+}
+*/
+function* people() {
+  // Creating a list of peoples ages
+  yield 43;
+  yield 12;
+  yield 25;
+}
+
+for (let age of people()) {
+  // print ages of people by loop as much as the amount of yields/ages avaliable
+  console.log(age);
+}
+
+let string = "text"; // Print text as individual letters
+for (let value of string) {
+  console.log(value);
+}
