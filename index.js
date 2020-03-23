@@ -34,11 +34,48 @@ for (let x = 0; x < 2; x++)         // 3 Dimensional Array
             console.log(x, y, z);
         }
 
-for (let x = 0; x < 2; x++)         // 2 Dimensional Array
+for (let x = 0; x < 2; x++)   // 2 Dimensional Array
     for (let y = 0; y < 2; y++) {
         console.log(x, y);
     }
-*/
-for (let i = 0; i < 3; i++) {
+
+for (let i = 0; i < 3; i++) { // Print loop 3 times
   console.log("Loop.");
 }
+
+for (let i = 0; i < 3; i++) { // Print loop 3 times
+  let loop = "loop";
+  console.log(loop);
+}
+
+for (let i = 0; i < 3; i++) { // Skip an iteration
+  if (i == 1) {
+    continue
+  }
+  console.log(i);
+}
+
+for (let i = 0;; i++) { // Breaking a loop
+    console.log(" loop");
+    break;
+}
+
+let c = 0;
+mark: for (let i = 0; i < 5; i++)
+  inner: for (let j = 0; j < 5; j++) {
+    c++;
+    if (i == 2) {
+      break mark;
+    }
+  }
+console.log(c);
+*/
+let c = 0;
+mark: for (let i = 0; i < 5; i++)
+  inner: for (let j = 0; j < 5; j++) {
+    c++;
+    if (i == 2) {
+      break inner;
+    }
+  }
+console.log(c);
